@@ -14,11 +14,10 @@ public enum Suit {CLUB("\u2663"), DIAMOND("\u2666"), HEART("\u2665"), SPADE("\u2
     }
 
     /**
-     * Override toString method to print out the symbol of the Suit
+     * Method to get the symbol of the suit
      * @return string format
      */
-    @Override
-    public String toString(){
+    public String symbol(){
         return this.symbol;
     }
 

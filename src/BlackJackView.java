@@ -4,6 +4,7 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.io.File;
+import java.nio.file.Paths;
 
 public class BlackJackView extends JFrame{
     private JPanel dealerPanel;
@@ -15,7 +16,7 @@ public class BlackJackView extends JFrame{
     private JLabel message = new JLabel("");
     private JPanel[][] panelHolder;
     private JLabel faceDownCard;
-    private final String myPath = "/Users/wentinglin/Desktop/CS5004/blackJack/src/resources/";
+    public final String myPath = Paths.get("").toAbsolutePath().toString() + "/src/resources/";
 
     public BlackJackView() {
         super("Black Jack");
@@ -137,6 +138,7 @@ public class BlackJackView extends JFrame{
     public JButton getRestartButton() {
         return restartButton;
     }
+
 
 }
 

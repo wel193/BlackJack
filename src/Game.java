@@ -18,10 +18,7 @@ public class Game {
         dealer = new Dealer(deck);
     }
 
-    /**
-     * Method to display game end status
-     */
-    private void displayGameEnd(){
+    public void displayGameEnd(){
         if (player.getScore() == dealer.getScore()) {
             System.out.println("Push!");
         } else {
@@ -36,22 +33,23 @@ public class Game {
     public void play() {
         System.out.println("Game start!");
 
-        System.out.println("Your initial card: " + player.showHand());
         System.out.println("Dealer's initial card: " + dealer.showInitialCard());
         System.out.println();
 
-        System.out.println("=========== Your turn ============\n");
+        System.out.println("=========== Your turn ============");
+        System.out.println("Your initial card: " + player.showHand());
         player.turn(deck);
         System.out.println();
 
         System.out.println("=========== Dealer's turn ============");
         System.out.println("Dealer show second card......");
         System.out.println("Dealer's card: " + dealer.showHand());
-        if (!dealer.blackJack()) {
-            dealer.turn(deck);
-            System.out.println();
-        }
+        System.out.println();
 
+        dealer.turn(deck);
+        System.out.println();
+
+        System.out.println("=========== This round end ============");
         displayGameEnd();
 
     }

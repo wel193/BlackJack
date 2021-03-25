@@ -28,7 +28,7 @@ public class Player {
      * @return point
      */
     public int getScore() {
-        return score;
+        return this.score;
     }
 
     /**

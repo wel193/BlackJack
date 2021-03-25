@@ -5,7 +5,6 @@ import java.awt.event.ActionListener;
 public class BlackJackController implements ActionListener {
     private BlackJackModel model;
     private BlackJackView view;
-    private boolean dealerNotFlipped;
 
     public BlackJackController() {
         model = new BlackJackModel();
@@ -33,7 +32,6 @@ public class BlackJackController implements ActionListener {
         view.addFaceDownCardToPanel(view.getDealerPanel());
         view.addCardToPanel(model.getPlayerHitCard(), view.getPlayerPanel());
         view.addCardToPanel(model.getPlayerHitCard(), view.getPlayerPanel());
-        dealerNotFlipped = true;
     }
 
 

@@ -46,7 +46,7 @@ public class Card implements Comparable<Card>{
      */
     @Override
     public String toString(){
-        return getSuit() + " " + getName();
+        return getSuit().symbol() + " " + getName();
     }
 
     /**
