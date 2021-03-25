@@ -44,7 +44,7 @@ public class Game {
         System.out.println("=========== Dealer's turn ============");
         System.out.println("Dealer show second card......");
         System.out.println("Dealer's card: " + dealer.showHand());
-        if (dealer.blackJack()) {
+        if (!dealer.blackJack()) {
             dealer.turn(deck);
             System.out.println();
         }
