@@ -29,12 +29,12 @@ public class Dealer extends Player{
             return;
         }
 
-        while (this.getPoint() < 17){
+        while (this.getScore() < 17){
             this.hit(deck);
             this.showStatus();
             if (this.isBust()){
                 System.out.println("Dealer Busts!");
-                this.resetPoint();
+                this.resetScore();
                 return;
             }
         }
