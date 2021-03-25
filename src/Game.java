@@ -18,7 +18,10 @@ public class Game {
         dealer = new Dealer(deck);
     }
 
-    public void displayGameEnd(){
+    /**
+     * Method to display game end status
+     */
+    private void displayGameEnd(){
         if (player.getScore() == dealer.getScore()) {
             System.out.println("Push!");
         } else {
