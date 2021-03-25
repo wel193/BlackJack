@@ -99,6 +99,10 @@ public class Deck {
      * @return string format of the Card in the Deck object
      */
     public String toString(){
+        if (this.getSize() == 0 ){
+            return "";
+        }
+
         String str = " | ";
         for (Card card: this.deck){
             str += card.toString() + " | ";
