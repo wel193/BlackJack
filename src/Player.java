@@ -5,21 +5,21 @@ import java.util.Scanner;
  */
 public class Player {
     private Hand hand;
-    private int point;
+    private int score;
 
     /**
      * Default constructor of Player with empty hand card.
      */
     public Player(){
         this.hand = new Hand();
-        this.point = 0;
+        this.score = 0;
     }
     /**
      * Constructor of Player. Initializes it with Hand object with size 2, the default name, and initial points.
      */
     public Player(Deck sourceDeck) {
         this.hand = new Hand(2, sourceDeck);
-        this.point = this.getHand().handPoint();
+        this.score = this.getHand().handPoint();
     }
 
 
@@ -27,15 +27,15 @@ public class Player {
      * Method to get point of Player
      * @return point
      */
-    public int getPoint() {
-        return point;
+    public int getScore() {
+        return score;
     }
 
     /**
      * Method to reset point to 0
      */
-    public void resetPoint() {
-        this.point = 0;
+    public void resetScore() {
+        this.score = 0;
     }
 
     /**
@@ -61,7 +61,7 @@ public class Player {
      */
     public void hit(Deck deck){
         this.hand.addCard(deck.getFirstCard());
-        this.point = this.hand.handPoint();
+        this.score = this.hand.handPoint();
 
     }
 
@@ -70,7 +70,7 @@ public class Player {
      * @return boolean
      */
     public boolean isBust() {
-        return this.getPoint() > 21;
+        return this.getScore() > 21;
     }
 
 
@@ -97,7 +97,7 @@ public class Player {
                     showStatus();
                     if (isBust()) {
                         System.out.println("You Bust!");
-                        this.resetPoint();
+                        this.resetScore();
                         return;
                     }
                     break;
@@ -122,7 +122,7 @@ public class Player {
      */
     public void showStatus() {
         System.out.println("Hand cards: " + this.showHand());
-        System.out.println("Total point now: " + this.getPoint());
+        System.out.println("Total point now: " + this.getScore());
     }
 
 }

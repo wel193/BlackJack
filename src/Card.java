@@ -59,4 +59,17 @@ public class Card implements Comparable<Card>{
         return this.getName().number() - card.getName().number();
     }
 
+    /**
+     * Method to check if the calling object is equal to other Card object
+     * @param other other Object
+     * @return boolean
+     */
+    @Override
+    public boolean equals(Object other) {
+        if (this == other) return true;
+        if (other == null || getClass() != other.getClass()) return false;
+        Card card = (Card) other;
+        return suit == card.suit && name == card.name;
+    }
+
 }

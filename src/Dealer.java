@@ -3,6 +3,12 @@
  */
 public class Dealer extends Player{
 
+    /**
+     * Default constructor of Dealer with empty hand card.
+     */
+    public Dealer(){
+        super();
+    }
 
     /**
      * Constructor of Dealer. Initializes it with Hand object with size 2, the default name, and initial points.

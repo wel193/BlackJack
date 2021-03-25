@@ -57,6 +57,7 @@ public class Hand extends Deck{
         System.out.println("Hand 1: " + hand1);
         System.out.println("Hand 2: " + hand2);
 
+        //add card back to deck
         for (int i = 0; i < 5; i ++){
             deck.addCard(hand1.getFirstCard());
             deck.addCard(hand2.getFirstCard());
@@ -64,7 +65,6 @@ public class Hand extends Deck{
 
         deck.sortCard();
         System.out.println("Deck: " + deck);
-
     }
 
 }

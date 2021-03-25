@@ -29,7 +29,7 @@ public class Deck {
     /**
      * Initializes the deck with certain Card objects.
      */
-    public void initDeck(){
+    private void initDeck(){
         for (Suit suit : Suit.values()) {
             for (Name name : Name.values()) {
                 this.deck.add(new Card(suit, name));
@@ -104,6 +104,22 @@ public class Deck {
             str += card.toString() + " | ";
         }
         return str;
+    }
+
+    /**
+     * Method to check if the calling object is equal to another Deck object
+     * @param other other Object
+     * @return boolean
+     */
+    @Override
+    public boolean equals(Object other) {
+        if (this == other) return true;
+        if (other == null || getClass() != other.getClass()) return false;
+        Deck deck = (Deck) other;
+        if(getSize() == deck.getSize()){
+            return true;
+        }
+        return false;
     }
 
 }

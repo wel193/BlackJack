@@ -19,10 +19,10 @@ public class Game {
     }
 
     public void displayGameEnd(){
-        if (player.getPoint() == dealer.getPoint()) {
+        if (player.getScore() == dealer.getScore()) {
             System.out.println("Push!");
         } else {
-            String winner = (player.getPoint() > dealer.getPoint()) ? "You" : "Dealer";
+            String winner = (player.getScore() > dealer.getScore()) ? "You" : "Dealer";
             System.out.println(winner + " win!");
         }
     }
